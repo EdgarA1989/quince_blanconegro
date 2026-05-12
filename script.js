@@ -267,10 +267,9 @@ function initPlayer(c) {
       audio.play().catch(() => {});
       if (icon) icon.textContent = '■';
       btn.classList.add('playing');
-      btn.setAttribute('aria-label', 'Detener');
+      btn.setAttribute('aria-label', 'Pausar');
     } else {
       audio.pause();
-      audio.currentTime = 0;
       if (icon) icon.textContent = '▶';
       btn.classList.remove('playing');
       btn.setAttribute('aria-label', 'Reproducir');
