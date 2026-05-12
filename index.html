@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Invitación digital — 15 de Isabella" />
+  <meta property="og:title" content="15 · Isabella" />
+  <meta property="og:description" content="Hay noches que marcan para siempre." />
+  <meta property="og:type" content="website" />
+  <title>15 · Isabella</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── MÚSICA ── -->
+  <div id="player" class="player" aria-label="Reproductor de música">
+    <button id="player-btn" class="player-btn" aria-label="Reproducir música">
+      <span class="player-icon">▶</span>
+    </button>
+    <div class="player-info">
+      <span id="player-titulo" class="player-titulo">Golden Hour</span>
+      <span id="player-artista" class="player-artista">JVKE</span>
+    </div>
+    <audio id="player-audio" loop preload="none"></audio>
+  </div>
+
+  <!-- ── HÉROE ── -->
+  <section id="hero" class="hero">
+    <div class="hero-inner">
+      <div class="hero-linea hero-linea--top"></div>
+      <span class="hero-xv" aria-hidden="true">X V</span>
+      <h1 id="hero-nombre" class="hero-nombre">Isabella</h1>
+      <div class="hero-linea hero-linea--bottom"></div>
+      <p id="hero-frase" class="hero-frase">Hay noches que marcan para siempre.</p>
+      <p id="hero-frase-sub" class="hero-frase-sub">Esta es una de ellas.</p>
+      <p id="hero-fecha" class="hero-fecha">Sábado · 19 de Septiembre · 2026</p>
+      <a href="#bienvenida" class="hero-cta" id="hero-cta">Ver invitación</a>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span class="scroll-linea"></span>
+    </div>
+  </section>
+
+  <!-- ── CONTENIDO DE LA INVITACIÓN (controlado por splash en config.json) ── -->
+  <div id="invitation-content">
+
+  <!-- ── CUENTA REGRESIVA ── -->
+  <section id="countdown" class="countdown">
+    <p class="section-superlabel">Faltan</p>
+    <div id="cd-box" class="cd-box">
+    <div class="countdown-grid">
+      <div class="cd-bloque">
+        <span id="cd-dias" class="cd-num">000</span>
+        <span class="cd-label">días</span>
+      </div>
+      <div class="cd-sep" aria-hidden="true">·</div>
+      <div class="cd-bloque">
+        <span id="cd-horas" class="cd-num">00</span>
+        <span class="cd-label">horas</span>
+      </div>
+      <div class="cd-sep" aria-hidden="true">·</div>
+      <div class="cd-bloque">
+        <span id="cd-min" class="cd-num">00</span>
+        <span class="cd-label">min</span>
+      </div>
+      <div class="cd-sep" aria-hidden="true">·</div>
+      <div class="cd-bloque">
+        <span id="cd-seg" class="cd-num">00</span>
+        <span class="cd-label">seg</span>
+      </div>
+    </div>
+    </div><!-- /cd-box -->
+  </section>
+
+  <!-- ── BIENVENIDA / PRESENTACIÓN ── -->
+  <section id="bienvenida" class="bienvenida">
+    <div class="bienvenida-inner reveal">
+      <div class="bienvenida-ornamento" aria-hidden="true">"</div>
+      <h2 id="bv-titulo" class="bv-titulo">Una noche para recordar.</h2>
+      <p id="bv-texto" class="bv-texto">
+        Quince años siendo exactamente quien soy. Cada paso hasta acá fue con ustedes.
+        Gracias por estar, gracias por venir. Esta noche la hacemos juntos.
+      </p>
+      <div id="bv-firma" class="bv-firma">— Isabella</div>
+    </div>
+  </section>
+
+  <!-- ── FECHA Y HORA ── -->
+  <section id="cuando" class="cuando">
+    <p class="section-superlabel reveal">La noche es</p>
+    <div class="cuando-inner reveal">
+      <p class="cuando-dia-semana" id="cuando-dia-semana">Sábado</p>
+      <div class="cuando-numero" id="cuando-numero">19</div>
+      <p class="cuando-mes" id="cuando-mes">Septiembre · 2026</p>
+      <div class="cuando-sep" aria-hidden="true"></div>
+      <div class="cuando-hora" id="cuando-hora">21:00 hs</div>
+    </div>
+    <div id="calendario-card" class="calendario-card reveal"></div>
+  </section>
+
+  <!-- ── LUGAR ── -->
+  <section id="donde" class="donde">
+    <p class="section-superlabel section-superlabel--light reveal">El lugar</p>
+    <h2 id="donde-nombre" class="donde-nombre reveal">Palacio San Telmo</h2>
+    <p id="donde-barrio" class="donde-barrio reveal">San Telmo · Buenos Aires</p>
+    <p id="donde-dir" class="donde-dir reveal">Av. San Juan 100, C.A.B.A.</p>
+    <a id="donde-mapa" href="#" class="donde-btn reveal" target="_blank" rel="noopener noreferrer">
+      Cómo llegar <span aria-hidden="true">→</span>
+    </a>
+  </section>
+
+  <!-- ── DRESS CODE ── -->
+  <section id="dresscode" class="dresscode">
+    <div class="dc-inner reveal">
+      <span class="dc-ornamento" aria-hidden="true">✦</span>
+      <p class="section-superlabel">Dress code</p>
+      <h2 id="dc-texto" class="dc-texto">Elegante · Formal</h2>
+      <p id="dc-nota" class="dc-nota">El blanco y negro están reservados para la festejada.</p>
+    </div>
+  </section>
+
+  <!-- ── REGALOS ── -->
+  <section id="regalos" class="regalos">
+    <p class="section-superlabel reveal">Regalos</p>
+    <p id="regalos-texto" class="regalos-texto reveal">
+      Tu presencia ya es todo. Si querés hacerme un detalle, podés hacerlo por acá.
+    </p>
+    <div class="regalos-card reveal">
+      <div class="rc-campo">
+        <span class="rc-label">Alias</span>
+        <span id="regalos-alias" class="rc-valor">isabella.gomez</span>
+        <button class="rc-copiar" data-campo="regalos-alias" aria-label="Copiar alias">Copiar</button>
+      </div>
+      <div class="rc-sep" aria-hidden="true"></div>
+      <div class="rc-campo">
+        <span class="rc-label">CBU</span>
+        <span id="regalos-cbu" class="rc-valor rc-mono">0000003100025264839001</span>
+        <button class="rc-copiar" data-campo="regalos-cbu" aria-label="Copiar CBU">Copiar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GALERÍA ── -->
+  <section id="galeria" class="galeria">
+    <p class="section-superlabel section-superlabel--light">Galería</p>
+    <div id="galeria-grid" class="galeria-grid">
+      <!-- Generado por script.js desde config.json → fotos[] -->
+    </div>
+  </section>
+
+  <!-- ── CONFIRMAR ── -->
+  <section id="confirmar" class="confirmar">
+    <p class="section-superlabel section-superlabel--light reveal">¿Venís?</p>
+    <h2 class="confirmar-titulo reveal">Confirmá tu asistencia</h2>
+    <p class="confirmar-texto reveal">Hacé saber que vas a estar. Tu lugar ya te espera.</p>
+    <div class="confirmar-btns reveal">
+      <a id="btn-whatsapp" href="#" class="btn-confirmar btn-wp" target="_blank" rel="noopener noreferrer">
+        Confirmar asistencia →
+      </a>
+      <button id="btn-calendario" class="btn-confirmar btn-cal">
+        Guardar la fecha
+      </button>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer id="footer" class="footer">
+    <div class="footer-inner reveal">
+      <div class="footer-linea" aria-hidden="true"></div>
+      <p id="footer-mensaje" class="footer-mensaje">Nos vemos esta noche.</p>
+      <p id="footer-firma" class="footer-firma">Isabella · 2026</p>
+    </div>
+  </footer>
+
+  </div><!-- /invitation-content -->
+
+  <script src="script.js"></script>
+</body>
+</html>

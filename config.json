@@ -1,0 +1,63 @@
+{
+  "nombre": "Isabella",
+  "frase": "Hay noches que marcan para siempre.",
+  "fraseSub": "Esta es una de ellas.",
+  "fecha": "2026-09-19T21:00:00",
+  "fechaDisplay": "Sábado · 19 de Septiembre · 2026",
+  "hora": "21:00 hs",
+  "heroFoto": "",
+  "splash": true,
+
+  "bienvenida": {
+    "titulo": "Una noche para recordar.",
+    "texto": "Quince años siendo exactamente quien soy. Cada paso hasta acá fue con ustedes. Gracias por estar, gracias por venir. Esta noche la hacemos juntos."
+  },
+
+  "lugar": {
+    "nombre": "Palacio San Telmo",
+    "barrio": "San Telmo · Buenos Aires",
+    "direccion": "Av. San Juan 100, C.A.B.A.",
+    "mapsUrl": "https://maps.app.goo.gl/LINK"
+  },
+
+  "dresscode": {
+    "texto": "Elegante · Formal",
+    "nota": "El blanco y negro están reservados para la festejada."
+  },
+
+  "regalos": {
+    "texto": "Tu presencia ya es todo. Si querés hacerme un detalle, podés hacerlo por acá.",
+    "alias": "isabella.gomez",
+    "cbu": "0000003100025264839001",
+    "banco": "Mercado Pago / cualquier banco"
+  },
+
+  "whatsapp": {
+    "numero": "5491155550000",
+    "mensaje": "¡Hola! Confirmo mi asistencia a los 15 de Isabella 🤍"
+  },
+
+  "musica": {
+    "src": "music/titanium.mp3",
+    "titulo": "Titanium",
+    "artista": "David Guetta ft. Sia"
+  },
+
+  "fotos": [
+    "img/foto horizontal 1.png",
+    "img/foto vertical 1.png",
+    "img/foto vertical 2.png",
+    "img/foto vertical 3.png",
+    "img/foto vertical 4.png",
+    "img/foto horizontal 2.png"
+  ],
+
+  "footer": {
+    "mensaje": "Nos vemos esta noche.",
+    "firma": "Isabella · 2026"
+  },
+
+  "tema": {
+    "acento": "#0a0a0a"
+  }
+}
