@@ -404,7 +404,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: clamp(0.45rem, 2vw, 1rem);
+  gap: clamp(0.9rem, 3.5vw, 1.4rem);
   flex-wrap: nowrap;
   margin-top: 0.5rem;
   position: relative;
@@ -416,16 +416,16 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: clamp(3.2rem, 12vw, 5.2rem);
+  min-width: clamp(3.8rem, 14vw, 5.5rem);
 }
 
 .cd-num {
   font-family: var(--font-sans);
-  font-size: clamp(2.6rem, 10vw, 4.4rem);
+  font-size: clamp(2.4rem, 9.5vw, 4.4rem);
   font-weight: 400;
   color: white;
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.01em;
   font-variant-numeric: tabular-nums;
 }
 
@@ -441,10 +441,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .cd-sep {
   font-family: var(--font-sans);
-  font-size: clamp(1.5rem, 5vw, 2.4rem);
+  font-size: clamp(1.4rem, 5vw, 2.2rem);
+  font-weight: 700;
   color: white;
   line-height: 1;
-  padding-top: 0.55rem;
+  padding-top: 0.45rem;
+  opacity: 0.6;
+  flex-shrink: 0;
 }
 
 /* =====================================================
@@ -942,6 +945,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* =====================================================
    RESPONSIVE
    ===================================================== */
+@media (max-width: 380px) {
+  .cd-num  { font-size: 2rem; }
+  .cd-sep  { font-size: 1.2rem; padding-top: 0.35rem; }
+  .countdown-grid { gap: 0.5rem; }
+  .cd-bloque { min-width: 3rem; }
+  .cd-box { padding: 1.4rem 0.8rem; }
+}
+
 @media (min-width: 640px) {
   .confirmar-btns {
     flex-direction: row;

@@ -254,7 +254,8 @@ function initGuardarFecha(c) {
 function initPlayer(c) {
   const audio = document.getElementById('player-audio');
   const btn   = document.getElementById('player-btn');
-  const icon  = btn?.querySelector('.player-icon');
+  const play  = btn?.querySelector('.icon-play');
+  const pause = btn?.querySelector('.icon-pause');
   if (!audio || !btn) return;
 
   if (c.musica?.src)     audio.src = c.musica.src;
@@ -265,12 +266,14 @@ function initPlayer(c) {
   btn.addEventListener('click', () => {
     if (audio.paused) {
       audio.play().catch(() => {});
-      if (icon) icon.textContent = '■';
+      if (play)  play.style.display  = 'none';
+      if (pause) pause.style.display = '';
       btn.classList.add('playing');
       btn.setAttribute('aria-label', 'Pausar');
     } else {
       audio.pause();
-      if (icon) icon.textContent = '▶';
+      if (play)  play.style.display  = '';
+      if (pause) pause.style.display = 'none';
       btn.classList.remove('playing');
       btn.setAttribute('aria-label', 'Reproducir');
     }
